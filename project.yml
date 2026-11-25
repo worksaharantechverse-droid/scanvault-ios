@@ -1,0 +1,122 @@
+{
+  "name": "ScanVault",
+  "options": {
+    "deploymentTarget": "17.0",
+    "createIntermediateGroups": true,
+    "bundleIdPrefix": "com.portfolio",
+    "groupSortPosition": "top"
+  },
+  "settings": {
+    "SWIFT_VERSION": "5.0",
+    "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+    "CLANG_ENABLE_MODULES": true,
+    "ALWAYS_SEARCH_USER_PATHS": false,
+    "ENABLE_USER_SCRIPT_SANDBOXING": true,
+    "DEVELOPMENT_TEAM": "",
+    "CODE_SIGN_STYLE": "Automatic",
+    "MARKETING_VERSION": "1.0",
+    "CURRENT_PROJECT_VERSION": "1",
+    "GENERATE_INFOPLIST_FILE": true
+  },
+  "targets": {
+    "ScanVault": {
+      "type": "application",
+      "platform": "iOS",
+      "sources": [
+        "Sources/ScanVault",
+        "Resources"
+      ],
+      "resources": [
+        "Resources/Assets.xcassets"
+      ],
+      "info": {
+        "path": "Sources/ScanVault/Info.plist",
+        "properties": {
+          "CFBundleDisplayName": "ScanVault",
+          "UILaunchScreen": {},
+          "UIApplicationSupportsIndirectInputEvents": true,
+          "ITSAppUsesNonExemptEncryption": false,
+          "NSCameraUsageDescription": "ScanVault uses the camera to capture documents for scanning.",
+          "NSPhotoLibraryUsageDescription": "ScanVault uses the photo library to import images for scanning."
+        }
+      },
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.scanvault",
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "SWIFT_EMIT_LOC_STRINGS": true,
+        "CODE_SIGN_STYLE": "Automatic",
+        "TARGETED_DEVICE_FAMILY": "1",
+        "SUPPORTS_MACCATALYST": false
+      }
+    },
+    "ScanVaultTests": {
+      "type": "bundle.unit-test",
+      "platform": "iOS",
+      "sources": [
+        "Tests/ScanVaultTests"
+      ],
+      "dependencies": [
+        {
+          "target": "ScanVault"
+        }
+      ],
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.scanvault.tests",
+        "CODE_SIGN_STYLE": "Automatic"
+      }
+    },
+    "ScanVaultUITests": {
+      "type": "bundle.ui-testing",
+      "platform": "iOS",
+      "sources": [
+        "UITests/ScanVaultUITests"
+      ],
+      "dependencies": [
+        {
+          "target": "ScanVault"
+        }
+      ],
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.scanvault.uitests",
+        "CODE_SIGN_STYLE": "Automatic"
+      }
+    }
+  },
+  "schemes": [
+    {
+      "name": "ScanVault",
+      "buildTargets": [
+        {
+          "target": "ScanVault",
+          "debug": true,
+          "profile": true,
+          "analyze": true,
+          "archive": true
+        }
+      ],
+      "testTargets": [
+        {
+          "target": "ScanVaultTests"
+        },
+        {
+          "target": "ScanVaultUITests"
+        }
+      ],
+      "launchAction": {
+        "target": "ScanVault",
+        "debugger": "lldb"
+      },
+      "profileAction": {
+        "target": "ScanVault"
+      },
+      "analyzeAction": {
+        "target": "ScanVault"
+      },
+      "archiveAction": {
+        "target": "ScanVault",
+        "revealArchiveInOrganizer": false
+      }
+    }
+  ]
+}

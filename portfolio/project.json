@@ -1,0 +1,36 @@
+{
+  "name": "ScanVault",
+  "description": "A SwiftUI document vault with on-device Vision OCR, SwiftData persistence, search, sharing and a camera fallback.",
+  "platform": "iOS 17.0+",
+  "programmingLanguage": "Swift 6.2",
+  "frameworks": ["SwiftUI", "SwiftData", "Vision", "PhotosUI", "UIKit"],
+  "features": [
+    "Photo Library import and physical-device camera capture",
+    "On-device text recognition",
+    "Searchable document list",
+    "Document detail with editable title and OCR text",
+    "Delete and system share sheet",
+    "Demo seeding via launch argument"
+  ],
+  "architecture": "MVVM with a SwiftData repository; Vision OCR on an actor; UIKit wrappers for camera and share; pure text helpers.",
+  "dataSources": [],
+  "developmentStatus": "complete",
+  "buildVerification": {
+    "status": "verified",
+    "xcode": "26.0.1",
+    "swift": "6.2",
+    "sdk": "iOS Simulator 26.0",
+    "deploymentTarget": "iOS 17.0",
+    "build": "passed",
+    "buildForTesting": "passed",
+    "unitTests": "authored; execution skipped at user request",
+    "uiTests": "authored; execution skipped at user request",
+    "simulatorLaunch": "verified with seeded demo documents",
+    "physicalDeviceTests": "camera capture and permission prompts require a physical device"
+  },
+  "screenshotPaths": [
+    "portfolio/screenshots/vault-light.png",
+    "portfolio/screenshots/vault-dark.png"
+  ],
+  "repositoryUrl": null
+}
